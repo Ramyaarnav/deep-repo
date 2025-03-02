@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "echo 'Build Completed'"
+                sh 'python automation.py'
             }
         }
     }
