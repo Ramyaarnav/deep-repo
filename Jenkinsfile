@@ -7,7 +7,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 sh "echo 'Checkout Completed'"
-                sh 'apt install python3 -y'
+                sh 'sudo apt install python3 -y'
             }
         }
         stage('Build') {
