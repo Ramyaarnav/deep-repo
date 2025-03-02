@@ -7,12 +7,13 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 sh "echo 'Checkout Completed'"
+                sh 'apt install python3 -y'
             }
         }
         stage('Build') {
             steps {
                 sh "echo 'Build Completed'"
-                sh 'python automation.py'
+                sh 'python3 automation.py'
             }
         }
     }
