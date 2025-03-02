@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'kubeagent'
+        label 'ubu'
     }
 
     stages {
@@ -17,7 +17,7 @@ pipeline {
     }
     post {
         always {
-            mail to: 'aswin@crunchops.com',
+            mail to: 'cham.deepika@gmail.com',
                  subject: "Jenkins Build Notification: ${currentBuild.fullDisplayName}",
                  body: """\
                  Build Status: ${currentBuild.currentResult}
